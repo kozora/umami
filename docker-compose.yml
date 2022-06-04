@@ -2,7 +2,7 @@
 version: '3'
 services:
   umami:
-    image: ghcr.io/mikecao/umami:postgresql-latest
+    image: umami:postgresql
     ports:
       - "3000:3000"
     environment:
