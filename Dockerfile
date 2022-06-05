@@ -13,7 +13,7 @@ RUN yarn config set --home enableTelemetry 0
 COPY package.json yarn.lock /build/
 
 # Install only the production dependencies
-RUN yarn install --production --frozen-lockfile
+RUN yarn install --production
 
 # Cache these modules for production
 RUN cp -R node_modules/ prod_node_modules/
