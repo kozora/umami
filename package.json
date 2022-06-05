@@ -53,6 +53,8 @@
     ]
   },
   "dependencies": {
+    "@sentry/react": "7.0.0",
+    "@sentry/tracing": "7.0.0",
     "@fontsource/inter": "4.5.7",
     "@prisma/client": "3.12.0",
     "bcryptjs": "^2.4.3",
