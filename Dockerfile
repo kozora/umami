@@ -19,7 +19,7 @@ RUN yarn install --production
 RUN cp -R node_modules/ prod_node_modules/
 
 # Install development dependencies
-RUN yarn install --frozen-lockfile
+RUN yarn install
 
 COPY . /build
 RUN yarn next telemetry disable
