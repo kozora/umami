@@ -8,6 +8,14 @@ import 'styles/bootstrap-grid.css';
 import 'styles/index.css';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/600.css';
+import * as Sentry from "@sentry/react";
+import { Integrations } from "@sentry/tracing";
+
+Sentry.init({
+  dsn: "https://b645f867ff8f40298b5d1ba4832addc7@sentry.monitor.moe/11",
+  integrations: [new Integrations.BrowserTracing()],
+  tracesSampleRate: 0.1,
+});
 
 const Intl = ({ children }) => {
   const { locale, messages } = useLocale();
